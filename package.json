@@ -11,6 +11,7 @@
     "url": "git+https://github.com/anio-fs-org/file.git"
   },
   "devDependencies": {
+    "@anio-fs/int--find-nearest-file": "^5.0.0",
     "@anio-fs/int--hash-file": "^4.0.0",
     "@anio-fs/int--read-file-in-chunks": "^3.0.1",
     "@anio-fs/int--write-atomic-file": "^3.0.0",
