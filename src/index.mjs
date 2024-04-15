@@ -17,3 +17,8 @@ export {
 	findNearestFile,
 	findNearestFileSync
 } from "@anio-fs/int--find-nearest-file"
+
+export {
+	writeAtomicFileJSON,
+	writeAtomicFileJSONSync
+} from "@anio-fs/int--write-atomic-file-json"
