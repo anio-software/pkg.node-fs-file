@@ -6,7 +6,8 @@ export default function() {
 			"@anio-fs/int--hash-file",
 			"@anio-fs/int--read-file-in-chunks",
 			"@anio-fs/int--write-atomic-file",
-			"@anio-fs/int--find-nearest-file"
+			"@anio-fs/int--find-nearest-file",
+			"@anio-fs/int--write-atomic-file-json"
 		]
 
 		for (const pkg of packages) {

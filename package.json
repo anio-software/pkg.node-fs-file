@@ -15,6 +15,7 @@
     "@anio-fs/int--hash-file": "^4.0.1",
     "@anio-fs/int--read-file-in-chunks": "^3.0.2",
     "@anio-fs/int--write-atomic-file": "^3.0.1",
+    "@anio-fs/int--write-atomic-file-json": "1.0.0",
     "@vipen/target-js": "0.17.0",
     "vipen": "0.2.1"
   },
