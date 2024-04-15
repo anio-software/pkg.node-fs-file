@@ -1,6 +1,6 @@
 {
   "name": "@anio-fs/file",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Provides various file operations.",
   "main": "./dist/package.min.mjs",
   "typings": "./dist/index.d.ts",
