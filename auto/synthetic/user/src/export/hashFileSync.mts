@@ -8,6 +8,6 @@ import {hashFileSyncFactory as factory} from "#~synthetic/user/export/hashFileSy
 
 const fn = factory(createContext())
 
-export function hashFileSync(file_path: string, algo: string, hash_encoding: BufferEncoding) : string {
+export function hashFileSync(file_path: string, algo: string, hash_encoding?: BufferEncoding) : string {
 	return fn(file_path, algo, hash_encoding)
 }

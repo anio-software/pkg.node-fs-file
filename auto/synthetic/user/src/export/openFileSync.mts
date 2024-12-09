@@ -9,6 +9,6 @@ import {openFileSyncFactory as factory} from "#~synthetic/user/export/openFileSy
 
 const fn = factory(createContext())
 
-export function openFileSync(path: string, flags: string, mode: number) : ReturnType<typeof x> {
+export function openFileSync(path: string, flags?: string, mode?: number) : ReturnType<typeof x> {
 	return fn(path, flags, mode)
 }

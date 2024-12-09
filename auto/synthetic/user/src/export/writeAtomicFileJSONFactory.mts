@@ -13,7 +13,7 @@ import {randomIdentifierSyncFactory} from "@aniojs/random-ident"
 declare function writeAtomicFileJSON(
 	file_path: string,
 	data: any,
-	options: {
+	options?: {
 		pretty?: boolean,
 		disable_new_line_at_eof?: boolean,
 		create_parents?: boolean
@@ -48,7 +48,7 @@ export function writeAtomicFileJSONFactory(context: RuntimeWrappedContextInstanc
 		}
 	}
 
-	return async function writeAtomicFileJSON(file_path: string, data: any, options: {
+	return async function writeAtomicFileJSON(file_path: string, data: any, options?: {
 		pretty?: boolean,
 		disable_new_line_at_eof?: boolean,
 		create_parents?: boolean

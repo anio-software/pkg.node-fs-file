@@ -10,7 +10,7 @@ import {getProject} from "@fourtune/realm-js/v0/project"
 declare function hashFile(
 	file_path: string,
 	algo: string,
-	hash_encoding: BufferEncoding
+	hash_encoding?: BufferEncoding
 ) : Promise<string>
 
 /**
@@ -37,7 +37,7 @@ export function hashFileFactory(context: RuntimeWrappedContextInstance) : typeof
 		}
 	}
 
-	return async function hashFile(file_path: string, algo: string, hash_encoding: BufferEncoding) : Promise<string> {
+	return async function hashFile(file_path: string, algo: string, hash_encoding?: BufferEncoding) : Promise<string> {
 		return await implementation(local_context, file_path, algo, hash_encoding)
 	}
 }

@@ -9,8 +9,8 @@ import {openFile as x} from "@aniojs-private/node-async-sync-fs/sync"
 
 declare function openFileSync(
 	path: string,
-	flags: string,
-	mode: number
+	flags?: string,
+	mode?: number
 ) : ReturnType<typeof x>
 
 /**
@@ -37,7 +37,7 @@ export function openFileSyncFactory(context: RuntimeWrappedContextInstance) : ty
 		}
 	}
 
-	return function openFileSync(path: string, flags: string, mode: number) : ReturnType<typeof x> {
+	return function openFileSync(path: string, flags?: string, mode?: number) : ReturnType<typeof x> {
 		return implementation(local_context, path, flags, mode)
 	}
 }

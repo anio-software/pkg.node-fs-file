@@ -9,6 +9,6 @@ import {hashFileFactory as factory} from "#~synthetic/user/export/hashFileFactor
 
 const fn = factory(createContext())
 
-export async function hashFile(file_path: string, algo: string, hash_encoding: BufferEncoding) : Promise<string> {
+export async function hashFile(file_path: string, algo: string, hash_encoding?: BufferEncoding) : Promise<string> {
 	return await fn(file_path, algo, hash_encoding)
 }

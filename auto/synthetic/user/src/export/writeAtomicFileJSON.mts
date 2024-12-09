@@ -8,7 +8,7 @@ import {writeAtomicFileJSONFactory as factory} from "#~synthetic/user/export/wri
 
 const fn = factory(createContext())
 
-export async function writeAtomicFileJSON(file_path: string, data: any, options: {
+export async function writeAtomicFileJSON(file_path: string, data: any, options?: {
 		pretty?: boolean,
 		disable_new_line_at_eof?: boolean,
 		create_parents?: boolean

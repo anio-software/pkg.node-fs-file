@@ -9,7 +9,7 @@ import {getProject} from "@fourtune/realm-js/v0/project"
 declare function hashFileSync(
 	file_path: string,
 	algo: string,
-	hash_encoding: BufferEncoding
+	hash_encoding?: BufferEncoding
 ) : string
 
 /**
@@ -36,7 +36,7 @@ export function hashFileSyncFactory(context: RuntimeWrappedContextInstance) : ty
 		}
 	}
 
-	return function hashFileSync(file_path: string, algo: string, hash_encoding: BufferEncoding) : string {
+	return function hashFileSync(file_path: string, algo: string, hash_encoding?: BufferEncoding) : string {
 		return implementation(local_context, file_path, algo, hash_encoding)
 	}
 }

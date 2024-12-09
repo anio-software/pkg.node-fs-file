@@ -10,8 +10,8 @@ import {openFile as x} from "@aniojs-private/node-async-sync-fs/async"
 
 declare function openFile(
 	path: string,
-	flags: string,
-	mode: number
+	flags?: string,
+	mode?: number
 ) : Promise<ReturnType<typeof x>>
 
 /**
@@ -38,7 +38,7 @@ export function openFileFactory(context: RuntimeWrappedContextInstance) : typeof
 		}
 	}
 
-	return async function openFile(path: string, flags: string, mode: number) : Promise<ReturnType<typeof x>> {
+	return async function openFile(path: string, flags?: string, mode?: number) : Promise<ReturnType<typeof x>> {
 		return await implementation(local_context, path, flags, mode)
 	}
 }

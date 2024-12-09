@@ -9,7 +9,7 @@ import {writeAtomicFileFactory as factory} from "#~synthetic/user/export/writeAt
 
 const fn = factory(createContext())
 
-export async function writeAtomicFile(file_path: string, data: string | Buffer, options: {
+export async function writeAtomicFile(file_path: string, data: string | Buffer, options?: {
 		create_parents?: boolean
 	}) : Promise<number> {
 	return await fn(file_path, data, options)

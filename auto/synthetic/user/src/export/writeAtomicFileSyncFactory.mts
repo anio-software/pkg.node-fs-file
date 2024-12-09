@@ -13,7 +13,7 @@ import {randomIdentifierSyncFactory} from "@aniojs/random-ident"
 declare function writeAtomicFileSync(
 	file_path: string,
 	data: string | Buffer,
-	options: {
+	options?: {
 		create_parents?: boolean
 	}
 ) : number
@@ -46,7 +46,7 @@ export function writeAtomicFileSyncFactory(context: RuntimeWrappedContextInstanc
 		}
 	}
 
-	return function writeAtomicFileSync(file_path: string, data: string | Buffer, options: {
+	return function writeAtomicFileSync(file_path: string, data: string | Buffer, options?: {
 		create_parents?: boolean
 	}) : number {
 		return implementation(local_context, dependencies, file_path, data, options)

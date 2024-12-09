@@ -10,6 +10,6 @@ import {openFileFactory as factory} from "#~synthetic/user/export/openFileFactor
 
 const fn = factory(createContext())
 
-export async function openFile(path: string, flags: string, mode: number) : Promise<ReturnType<typeof x>> {
+export async function openFile(path: string, flags?: string, mode?: number) : Promise<ReturnType<typeof x>> {
 	return await fn(path, flags, mode)
 }
