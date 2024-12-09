@@ -1,4 +1,4 @@
-import {hashFileSync, readFileInChunksSync} from "../src/index.mjs"
+import {hashFileSync, readFileInChunksSync} from "../dist/default/index.min.mjs"
 
 console.log(
 	hashFileSync("./package.json", "sha1"),
