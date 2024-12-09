@@ -30,6 +30,11 @@ export default {
 			source_file: "src/__writeAtomicFileJSONXXX.as.mts",
 			export_name: "writeAtomicFileJSONXXX",
 			destination: "src/export"
+		}),
+		...generateFactoryFiles({
+			source_file: "src/__findNearestFileXXX.as.mts",
+			export_name: "findNearestFileXXX",
+			destination: "src/export"
 		})
 	}
 }
