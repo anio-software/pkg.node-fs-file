@@ -17,6 +17,7 @@
   "type": "module",
   "devDependencies": {
     "@aniojs-private/node-async-sync-fs": "^0.2.0",
+    "@aniojs-private/node-fs-find-nearest-file": "^0.2.0",
     "@aniojs/random-ident": "^0.1.1",
     "@fourtune/core": "^0.1101.0",
     "@fourtune/realm-js": "^0.31000.2",
