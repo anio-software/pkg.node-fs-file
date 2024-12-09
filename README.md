@@ -1,3 +1,3 @@
-# @anio-fs/file
+# @aniojs/node-fs-file
 
 Provides various file operations.
