@@ -9,7 +9,6 @@ export function implementation(
 	file_path: string,
 	chunk_size: number
 ) : ReadFileInChunksResult {
-
 	const context = useContext(wrapped_context, 0)
 
 	context.log.debug(`reading file '${file_path}' with chunk size '${chunk_size}'.`)
