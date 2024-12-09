@@ -35,6 +35,11 @@ export default {
 			source_file: "src/__findNearestFileXXX.as.mts",
 			export_name: "findNearestFileXXX",
 			destination: "src/export"
+		}),
+		...generateFactoryFiles({
+			source_file: "src/__openFileXXX.as.mts",
+			export_name: "openFileXXX",
+			destination: "src/export"
 		})
 	}
 }
