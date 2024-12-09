@@ -11,11 +11,6 @@
     "url": "git+https://github.com/anio-fs-org/file.git"
   },
   "devDependencies": {
-    "@anio-fs/int--find-nearest-file": "^6.0.0",
-    "@anio-fs/int--hash-file": "^5.0.0",
-    "@anio-fs/int--read-file-in-chunks": "^4.0.0",
-    "@anio-fs/int--write-atomic-file": "^4.0.0",
-    "@anio-fs/int--write-atomic-file-json": "^2.0.0",
     "@fourtune/core": "^0.1101.0",
     "@fourtune/realm-js": "^0.31000.2",
     "fourtune": "^0.30000.0"
