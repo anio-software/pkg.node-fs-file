@@ -25,6 +25,11 @@ export default {
 			source_file: "src/__writeAtomicFileXXX.as.mts",
 			export_name: "writeAtomicFileXXX",
 			destination: "src/export"
+		}),
+		...generateFactoryFiles({
+			source_file: "src/__writeAtomicFileJSONXXX.as.mts",
+			export_name: "writeAtomicFileJSONXXX",
+			destination: "src/export"
 		})
 	}
 }
