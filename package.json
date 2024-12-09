@@ -16,8 +16,9 @@
     "@anio-fs/int--read-file-in-chunks": "^4.0.0",
     "@anio-fs/int--write-atomic-file": "^4.0.0",
     "@anio-fs/int--write-atomic-file-json": "^2.0.0",
-    "@fourtune/realm-js": "^0.1.0",
-    "fourtune": "^0.0.1"
+    "@fourtune/core": "^0.1101.0",
+    "@fourtune/realm-js": "^0.31000.2",
+    "fourtune": "^0.30000.0"
   },
   "scripts": {
     "prepare": "./node_modules/.bin/fourtune ."
