@@ -40,6 +40,11 @@ export default {
 			source_file: "src/__openFileXXX.as.mts",
 			export_name: "openFileXXX",
 			destination: "src/export"
+		}),
+		...generateFactoryFiles({
+			source_file: "src/__readFileStringXXX.as.mts",
+			export_name: "readFileStringXXX",
+			destination: "src/export"
 		})
 	}
 }
