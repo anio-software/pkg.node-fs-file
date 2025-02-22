@@ -9,7 +9,7 @@ import {writeAtomicFileSyncFactory as factory} from "#~synthetic/user/export/wri
 const fn = factory(createContext())
 
 export function writeAtomicFileSync(file_path: string, data: string | Buffer, options?: {
-		create_parents?: boolean
+		createParents?: boolean
 	}) : number {
 	return fn(file_path, data, options)
 }

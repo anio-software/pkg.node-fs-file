@@ -16,7 +16,7 @@ export function implementation(
 	file_path: string,
 	data: string | Buffer,
 	options?: {
-		create_parents?: boolean
+		createParents?: boolean
 	}
 ) : number {
 	const context = useContext(wrapped_context, 0)
@@ -28,7 +28,7 @@ export function implementation(
 	//
 	// if options.create_parents is set, make sure all sub-directories are created
 	//
-	if (options?.create_parents === true) {
+	if (options?.createParents === true) {
 		mkdir(parent_dir, {recursive: true})
 	}
 

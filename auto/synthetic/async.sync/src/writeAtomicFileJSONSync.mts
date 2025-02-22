@@ -15,8 +15,8 @@ export function implementation(
 	data: any,
 	options?: {
 		pretty?: boolean,
-		disable_new_line_at_eof?: boolean,
-		create_parents?: boolean
+		disableNewLineAtEOF?: boolean,
+		createParents?: boolean
 	}
 ) : number {
 	const context = useContext(wrapped_context, 0)
@@ -29,7 +29,7 @@ export function implementation(
 	// in unix it is common, if not required, that text files
 	// end with a new line
 	//
-	if (options?.disable_new_line_at_eof !== true) {
+	if (options?.disableNewLineAtEOF !== true) {
 		data_str += "\n"
 	}
 
@@ -39,7 +39,7 @@ export function implementation(
 		file_path,
 		data_str,
 		{
-			create_parents: options?.create_parents === true
+			createParents: options?.createParents === true
 		}
 	)
 }

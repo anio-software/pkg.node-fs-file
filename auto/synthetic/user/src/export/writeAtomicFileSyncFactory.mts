@@ -14,7 +14,7 @@ declare function writeAtomicFileSync(
 	file_path: string,
 	data: string | Buffer,
 	options?: {
-		create_parents?: boolean
+		createParents?: boolean
 	}
 ) : number
 
@@ -47,7 +47,7 @@ export function writeAtomicFileSyncFactory(context: RuntimeWrappedContextInstanc
 	}
 
 	return function writeAtomicFileSync(file_path: string, data: string | Buffer, options?: {
-		create_parents?: boolean
+		createParents?: boolean
 	}) : number {
 		return implementation(local_context, dependencies, file_path, data, options)
 	}
