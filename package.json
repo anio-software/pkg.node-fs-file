@@ -16,7 +16,7 @@
   },
   "type": "module",
   "devDependencies": {
-    "@aniojs-private/node-async-sync-fs": "^0.2.1",
+    "@aniojs-private/node-async-sync-fs": "^0.3.0",
     "@aniojs-private/node-fs-find-nearest-file": "^0.2.1",
     "@aniojs/random-ident": "^0.1.2",
     "@fourtune/core": "^0.1101.0",
