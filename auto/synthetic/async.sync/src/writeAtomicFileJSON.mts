@@ -17,6 +17,7 @@ export async function implementation(
 		pretty?: boolean,
 		disableNewLineAtEOF?: boolean,
 		createParents?: boolean
+		parentsMode?: number
 	}
 ) : Promise<number> {
 	const context = useContext(wrapped_context, 0)
@@ -39,7 +40,8 @@ export async function implementation(
 		file_path,
 		data_str,
 		{
-			createParents: options?.createParents === true
+			createParents: options?.createParents === true,
+			parentsMode: options?.parentsMode
 		}
 	)
 }

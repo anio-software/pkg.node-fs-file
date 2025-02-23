@@ -19,6 +19,7 @@ export async function implementation(
 	data: string | Buffer,
 	options?: {
 		createParents?: boolean
+		parentsMode?: number
 	}
 ) : Promise<number> {
 //>) : number {
@@ -32,8 +33,10 @@ export async function implementation(
 	// if options.create_parents is set, make sure all sub-directories are created
 	//
 	if (options?.createParents === true) {
-		await mkdir(parent_dir, {recursive: true})
-//>		mkdir(parent_dir, {recursive: true})
+		const mode = options?.parentsMode ?? 0o777
+
+		await mkdir(parent_dir, {recursive: true, mode})
+//>		mkdir(parent_dir, {recursive: true, mode})
 	}
 
 	const file_name = path.basename(file_path)

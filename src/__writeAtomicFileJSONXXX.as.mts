@@ -19,6 +19,7 @@ export async function implementation(
 		pretty?: boolean,
 		disableNewLineAtEOF?: boolean,
 		createParents?: boolean
+		parentsMode?: number
 	}
 ) : Promise<number> {
 //>) : number {
@@ -43,7 +44,8 @@ export async function implementation(
 		file_path,
 		data_str,
 		{
-			createParents: options?.createParents === true
+			createParents: options?.createParents === true,
+			parentsMode: options?.parentsMode
 		}
 	)
 }

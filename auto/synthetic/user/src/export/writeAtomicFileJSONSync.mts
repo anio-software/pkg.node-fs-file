@@ -8,6 +8,7 @@ export function writeAtomicFileJSONSync(file_path: string, data: any, options?: 
 		pretty?: boolean,
 		disableNewLineAtEOF?: boolean,
 		createParents?: boolean
+		parentsMode?: number
 	}) : number {
 	return fn(file_path, data, options)
 }
