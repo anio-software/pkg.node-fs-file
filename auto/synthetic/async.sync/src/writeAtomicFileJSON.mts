@@ -15,9 +15,10 @@ export async function implementation(
 	data: any,
 	options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : Promise<number> {
 	const context = useContext(wrapped_context, 0)
@@ -41,7 +42,8 @@ export async function implementation(
 		data_str,
 		{
 			createParents: options?.createParents === true,
-			parentsMode: options?.parentsMode
+			parentsMode: options?.parentsMode,
+			mode: options?.mode
 		}
 	)
 }

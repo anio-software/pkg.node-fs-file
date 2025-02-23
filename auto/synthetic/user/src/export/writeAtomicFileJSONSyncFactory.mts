@@ -11,9 +11,10 @@ declare function writeAtomicFileJSONSync(
 	data: any,
 	options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : number
 
@@ -47,9 +48,10 @@ export function writeAtomicFileJSONSyncFactory(context: RuntimeWrappedContextIns
 
 	return function writeAtomicFileJSONSync(file_path: string, data: any, options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : number {
 		return implementation(local_context, dependencies, file_path, data, options)
 	}

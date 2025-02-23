@@ -18,6 +18,7 @@ export function implementation(
 	options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : number {
 	const context = useContext(wrapped_context, 0)
@@ -41,7 +42,7 @@ export function implementation(
 
 	context.log.trace(`writing file at '${tmp_path}'`)
 
-	writeFile(tmp_path, data)
+	writeFile(tmp_path, data, {mode: options?.mode})
 
 	rename(tmp_path, file_path)
 

@@ -15,9 +15,10 @@ declare function writeAtomicFileJSON(
 	data: any,
 	options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : Promise<number>
 
@@ -51,9 +52,10 @@ export function writeAtomicFileJSONFactory(context: RuntimeWrappedContextInstanc
 
 	return async function writeAtomicFileJSON(file_path: string, data: any, options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : Promise<number> {
 		return await implementation(local_context, dependencies, file_path, data, options)
 	}

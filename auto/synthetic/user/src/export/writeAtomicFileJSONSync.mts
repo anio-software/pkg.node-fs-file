@@ -6,9 +6,10 @@ const fn = factory(createContext())
 
 export function writeAtomicFileJSONSync(file_path: string, data: any, options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : number {
 	return fn(file_path, data, options)
 }

@@ -10,9 +10,10 @@ const fn = factory(createContext())
 
 export async function writeAtomicFileJSON(file_path: string, data: any, options?: {
 		pretty?: boolean,
-		disableNewLineAtEOF?: boolean,
+		disableNewLineAtEOF?: boolean
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : Promise<number> {
 	return await fn(file_path, data, options)
 }

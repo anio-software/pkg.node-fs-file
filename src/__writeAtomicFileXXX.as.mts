@@ -20,6 +20,7 @@ export async function implementation(
 	options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : Promise<number> {
 //>) : number {
@@ -45,8 +46,8 @@ export async function implementation(
 
 	context.log.trace(`writing file at '${tmp_path}'`)
 
-	await writeFile(tmp_path, data)
-//>	writeFile(tmp_path, data)
+	await writeFile(tmp_path, data, {mode: options?.mode})
+//>	writeFile(tmp_path, data, {mode: options?.mode})
 
 	await rename(tmp_path, file_path)
 //>	rename(tmp_path, file_path)

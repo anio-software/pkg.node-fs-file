@@ -18,6 +18,7 @@ export async function implementation(
 	options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : Promise<number> {
 	const context = useContext(wrapped_context, 0)
@@ -41,7 +42,7 @@ export async function implementation(
 
 	context.log.trace(`writing file at '${tmp_path}'`)
 
-	await writeFile(tmp_path, data)
+	await writeFile(tmp_path, data, {mode: options?.mode})
 
 	await rename(tmp_path, file_path)
 

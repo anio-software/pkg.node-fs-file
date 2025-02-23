@@ -17,6 +17,7 @@ declare function writeAtomicFile(
 	options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}
 ) : Promise<number>
 
@@ -51,6 +52,7 @@ export function writeAtomicFileFactory(context: RuntimeWrappedContextInstance) :
 	return async function writeAtomicFile(file_path: string, data: string | Buffer, options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : Promise<number> {
 		return await implementation(local_context, dependencies, file_path, data, options)
 	}

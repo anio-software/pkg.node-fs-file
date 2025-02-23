@@ -11,6 +11,7 @@ const fn = factory(createContext())
 export function writeAtomicFileSync(file_path: string, data: string | Buffer, options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : number {
 	return fn(file_path, data, options)
 }

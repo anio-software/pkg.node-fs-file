@@ -12,6 +12,7 @@ const fn = factory(createContext())
 export async function writeAtomicFile(file_path: string, data: string | Buffer, options?: {
 		createParents?: boolean
 		parentsMode?: number
+		mode?: number
 	}) : Promise<number> {
 	return await fn(file_path, data, options)
 }
