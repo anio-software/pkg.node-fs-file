@@ -7,10 +7,8 @@ import {openFile as x} from "@aniojs-private/node-async-sync-fs/sync"
 
 import {openFileSyncFactory as factory} from "#~synthetic/user/export/openFileSyncFactory.mts"
 
-let __fnImplementation: any = null
-
 export function openFileSync(path: string, flags?: string, mode?: number) : ReturnType<typeof x> {
-	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+	const __fnImplementation = factory(createContext())
 
 	return __fnImplementation(path, flags, mode)
 }
