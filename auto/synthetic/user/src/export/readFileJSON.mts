@@ -6,8 +6,10 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {readFileJSONFactory as factory} from "#~synthetic/user/export/readFileJSONFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function readFileJSON(path: string) : Promise<unknown> {
-	return await fn(path)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(path)
 }

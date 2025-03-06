@@ -8,8 +8,10 @@ import {openFile as x} from "@aniojs-private/node-async-sync-fs/async"
 
 import {openFileFactory as factory} from "#~synthetic/user/export/openFileFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function openFile(path: string, flags?: string, mode?: number) : Promise<ReturnType<typeof x>> {
-	return await fn(path, flags, mode)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(path, flags, mode)
 }

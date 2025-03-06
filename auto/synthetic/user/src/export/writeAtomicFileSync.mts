@@ -6,12 +6,14 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {writeAtomicFileSyncFactory as factory} from "#~synthetic/user/export/writeAtomicFileSyncFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export function writeAtomicFileSync(file_path: string, data: string | Buffer, options?: {
 		createParents?: boolean
 		parentsMode?: number
 		mode?: number
 	}) : number {
-	return fn(file_path, data, options)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return __fnImplementation(file_path, data, options)
 }

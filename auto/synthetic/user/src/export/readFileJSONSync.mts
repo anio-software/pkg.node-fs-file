@@ -2,8 +2,10 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {readFileJSONSyncFactory as factory} from "#~synthetic/user/export/readFileJSONSyncFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export function readFileJSONSync(path: string) : unknown {
-	return fn(path)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return __fnImplementation(path)
 }

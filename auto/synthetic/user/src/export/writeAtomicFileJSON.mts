@@ -6,7 +6,7 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {writeAtomicFileJSONFactory as factory} from "#~synthetic/user/export/writeAtomicFileJSONFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function writeAtomicFileJSON(file_path: string, data: any, options?: {
 		pretty?: boolean,
@@ -15,5 +15,7 @@ export async function writeAtomicFileJSON(file_path: string, data: any, options?
 		parentsMode?: number
 		mode?: number
 	}) : Promise<number> {
-	return await fn(file_path, data, options)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(file_path, data, options)
 }

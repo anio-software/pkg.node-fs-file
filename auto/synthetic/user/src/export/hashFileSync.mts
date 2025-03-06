@@ -6,8 +6,10 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {hashFileSyncFactory as factory} from "#~synthetic/user/export/hashFileSyncFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export function hashFileSync(file_path: string, algo: string, hash_encoding?: BufferEncoding) : string {
-	return fn(file_path, algo, hash_encoding)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return __fnImplementation(file_path, algo, hash_encoding)
 }

@@ -7,8 +7,10 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {hashFileFactory as factory} from "#~synthetic/user/export/hashFileFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function hashFile(file_path: string, algo: string, hash_encoding?: BufferEncoding) : Promise<string> {
-	return await fn(file_path, algo, hash_encoding)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(file_path, algo, hash_encoding)
 }

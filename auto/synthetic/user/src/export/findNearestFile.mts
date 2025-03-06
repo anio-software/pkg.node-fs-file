@@ -6,8 +6,10 @@ import {createContext} from "@fourtune/realm-js/v0/runtime"
 
 import {findNearestFileFactory as factory} from "#~synthetic/user/export/findNearestFileFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function findNearestFile(config_file_name: string, start_dir: string) : Promise<string|false> {
-	return await fn(config_file_name, start_dir)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(config_file_name, start_dir)
 }

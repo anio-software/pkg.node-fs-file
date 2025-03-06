@@ -6,8 +6,10 @@ import type {ReadFileInChunksSyncResult as ReadFileInChunksResult} from "#~synth
 
 import {readFileInChunksSyncFactory as factory} from "#~synthetic/user/export/readFileInChunksSyncFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export function readFileInChunksSync(file_path: string, chunk_size: number) : ReadFileInChunksResult {
-	return fn(file_path, chunk_size)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return __fnImplementation(file_path, chunk_size)
 }

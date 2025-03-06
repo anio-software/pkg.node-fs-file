@@ -7,8 +7,10 @@ import type {ReadFileInChunksResult} from "#~synthetic/async.sync/export/ReadFil
 
 import {readFileInChunksFactory as factory} from "#~synthetic/user/export/readFileInChunksFactory.mts"
 
-const fn = factory(createContext())
+let __fnImplementation: any = null
 
 export async function readFileInChunks(file_path: string, chunk_size: number) : Promise<ReadFileInChunksResult> {
-	return await fn(file_path, chunk_size)
+	if (__fnImplementation === null) __fnImplementation = factory(createContext());
+
+	return await __fnImplementation(file_path, chunk_size)
 }
