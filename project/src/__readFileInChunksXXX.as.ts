@@ -3,8 +3,8 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import type {ReadFileInChunksResult} from "#~synthetic/async.sync/export/ReadFileInChunksResult.d.mts"
-//>import type {ReadFileInChunksSyncResult as ReadFileInChunksResult} from "#~synthetic/async.sync/export/ReadFileInChunksSyncResult.d.mts"
+import type {ReadFileInChunksResult} from "#~src/ReadFileInChunksResult.ts"
+//>import type {ReadFileInChunksSyncResult as ReadFileInChunksResult} from "#~src/ReadFileInChunksSyncResult.ts"
 
 import {openFile} from "@aniojs-private/node-async-sync-fs/async"
 //>import {openFile} from "@aniojs-private/node-async-sync-fs/sync"
