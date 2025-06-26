@@ -12,16 +12,16 @@ import {openFile} from "@anio-software/pkg-private.node-consistent-fs/async"
 export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
-	file_path: string,
-	chunk_size: number
+	filePath: string,
+	chunkSize: number
 ) : Promise<ReadFileInChunksResult> {
 //>) : ReadFileInChunksResult {
 	const context = createContext(contextOptions, 0)
 
-	context.log.debug(`reading file '${file_path}' with chunk size '${chunk_size}'.`)
+	context.log.debug(`reading file '${filePath}' with chunk size '${chunkSize}'.`)
 
-	const file = await openFile(file_path, "r")
-//>	const file = openFile(file_path, "r")
+	const file = await openFile(filePath, "r")
+//>	const file = openFile(filePath, "r")
 
 	let closed = false
 
@@ -30,16 +30,16 @@ export async function __implementation(
 //>		readNextChunk() {
 			if (closed) return false
 
-			let chunk_buffer = Buffer.alloc(chunk_size)
+			let chunkBuffer = Buffer.alloc(chunkSize)
 
-			const bytes_read = await file.read(chunk_buffer)
-//>			const bytes_read = file.read(chunk_buffer)
+			const bytesRead = await file.read(chunkBuffer)
+//>			const bytesRead = file.read(chunkBuffer)
 
 			context.log.trace(
-				`read ${bytes_read} bytes from file ${file_path}`
+				`read ${bytesRead} bytes from file ${filePath}`
 			)
 
-			if (!bytes_read) {
+			if (!bytesRead) {
 				if (!closed) await file.close()
 //>				if (!closed) file.close()
 
@@ -48,7 +48,7 @@ export async function __implementation(
 				return false
 			}
 
-			return chunk_buffer.subarray(0, bytes_read)
+			return chunkBuffer.subarray(0, bytesRead)
 		},
 
 		async close() {
