@@ -1,6 +1,5 @@
 import {
-	type EnkoreJSRuntimeContextOptions,
-	createContext
+	type EnkoreJSRuntimeContextOptions
 } from "@anio-software/enkore.js-runtime"
 
 import {readFile} from "@anio-software/pkg-private.node-consistent-fs/async"
