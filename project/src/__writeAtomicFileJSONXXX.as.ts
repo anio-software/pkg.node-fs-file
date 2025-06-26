@@ -6,16 +6,16 @@ import {
 import {__implementation as writeAtomicFile} from "#~src/writeAtomicFile.ts"
 //>import {__implementationSync as writeAtomicFile} from "#~src/writeAtomicFileSync.ts"
 
-import {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
+import type {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
 
-export type AnioJsDependencies = {
+export type __EnkoreFunctionDependencies = {
 	randomIdentifierSync: typeof randomIdentifierSync
 }
 
 export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
-	dependencies: AnioJsDependencies,
+	dependencies: __EnkoreFunctionDependencies,
 	file_path: string,
 	data: any,
 	options?: {

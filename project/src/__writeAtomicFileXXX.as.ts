@@ -3,9 +3,9 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
+import type {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
 
-export type AnioJsDependencies = {
+export type __EnkoreFunctionDependencies = {
 	randomIdentifierSync: typeof randomIdentifierSync
 }
 
@@ -17,7 +17,7 @@ import {mkdir, writeFile, rename} from "@anio-software/pkg-private.node-consiste
 export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
-	dependencies: AnioJsDependencies,
+	dependencies: __EnkoreFunctionDependencies,
 	file_path: string,
 	data: string | Buffer,
 	options?: {
