@@ -18,7 +18,7 @@ export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: __EnkoreFunctionDependencies,
-	file_path: string,
+	filePath: string,
 	data: string | Buffer,
 	options?: {
 		createParents?: boolean
@@ -29,31 +29,31 @@ export async function __implementation(
 //>) : number {
 	const context = createContext(contextOptions, 0)
 
-	const random_str = dependencies.randomIdentifierSync(16)
+	const randomStr = dependencies.randomIdentifierSync(16)
 
-	const parent_dir = path.dirname(file_path)
+	const parentDir = path.dirname(filePath)
 
 	//
-	// if options.create_parents is set, make sure all sub-directories are created
+	// if options.createParents is set, make sure all sub-directories are created
 	//
 	if (options?.createParents === true) {
 		const mode = options?.parentsMode ?? 0o777
 
-		await mkdir(parent_dir, {recursive: true, mode})
-//>		mkdir(parent_dir, {recursive: true, mode})
+		await mkdir(parentDir, {recursive: true, mode})
+//>		mkdir(parentDir, {recursive: true, mode})
 	}
 
-	const file_name = path.basename(file_path)
-	const tmp_name = file_name + `.tmp${random_str}`
-	const tmp_path = path.join(parent_dir, tmp_name)
+	const fileName = path.basename(filePath)
+	const tmpName = fileName + `.tmp${randomStr}`
+	const tmpPath = path.join(parentDir, tmpName)
 
-	context.log.trace(`writing file at '${tmp_path}'`)
+	context.log.trace(`writing file at '${tmpPath}'`)
 
-	await writeFile(tmp_path, data, {mode: options?.mode})
-//>	writeFile(tmp_path, data, {mode: options?.mode})
+	await writeFile(tmpPath, data, {mode: options?.mode})
+//>	writeFile(tmpPath, data, {mode: options?.mode})
 
-	await rename(tmp_path, file_path)
-//>	rename(tmp_path, file_path)
+	await rename(tmpPath, filePath)
+//>	rename(tmpPath, filePath)
 
 	return data.length
 }
