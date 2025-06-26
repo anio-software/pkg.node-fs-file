@@ -5,8 +5,8 @@ import {
 
 import {createHash} from "node:crypto"
 
-import {implementation as readFileInChunks} from "#~synthetic/async.sync/readFileInChunks.mts"
-//>import {implementation as readFileInChunks} from "#~synthetic/async.sync/readFileInChunksSync.mts"
+import {__implementation as readFileInChunks} from "#~src/readFileInChunks.ts"
+//>import {__implementationSync as readFileInChunks} from "#~src/readFileInChunksSync.ts"
 
 export async function __implementation(
 //>export function __implementationSync(
