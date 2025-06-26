@@ -1,4 +1,7 @@
-import {useContext, type RuntimeWrappedContextInstance} from "@fourtune/realm-js/runtime"
+import {
+	type EnkoreJSRuntimeContextOptions,
+	createContext
+} from "@anio-software/enkore.js-runtime"
 
 import {randomIdentifierSync} from "@aniojs/random-ident"
 
@@ -13,7 +16,7 @@ import {mkdir, writeFile, rename} from "@aniojs-private/node-async-sync-fs/async
 
 export async function implementation(
 //>export function implementation(
-	wrapped_context: RuntimeWrappedContextInstance,
+	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: AnioJsDependencies,
 	file_path: string,
 	data: string | Buffer,
@@ -24,7 +27,7 @@ export async function implementation(
 	}
 ) : Promise<number> {
 //>) : number {
-	const context = useContext(wrapped_context, 0)
+	const context = createContext(contextOptions, 0)
 
 	const random_str = dependencies.randomIdentifierSync(16)
 

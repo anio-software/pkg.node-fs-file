@@ -1,4 +1,7 @@
-import {useContext, type RuntimeWrappedContextInstance} from "@fourtune/realm-js/runtime"
+import {
+	type EnkoreJSRuntimeContextOptions,
+	createContext
+} from "@anio-software/enkore.js-runtime"
 
 import {createHash} from "node:crypto"
 
@@ -7,13 +10,13 @@ import {implementation as readFileInChunks} from "#~synthetic/async.sync/readFil
 
 export async function implementation(
 //>export function implementation(
-	wrapped_context: RuntimeWrappedContextInstance,
+	contextOptions: EnkoreJSRuntimeContextOptions,
 	file_path: string,
 	algo: string,
 	hash_encoding?: BufferEncoding
 ) : Promise<string> {
 //>) : string {
-	const context = useContext(wrapped_context, 0)
+	const context = createContext(contextOptions, 0)
 
 	const hash = createHash(algo)
 
@@ -24,8 +27,8 @@ export async function implementation(
 	//
 	// read file in 4096 byte chunks
 	//
-	const file = await readFileInChunks(wrapped_context, file_path, 4096)
-//>	const file = readFileInChunks(wrapped_context, file_path, 4096)
+	const file = await readFileInChunks(contextOptions, file_path, 4096)
+//>	const file = readFileInChunks(contextOptions, file_path, 4096)
 
 	while (true) {
 		const chunk = await file.readNextChunk()

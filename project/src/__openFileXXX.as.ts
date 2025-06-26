@@ -1,11 +1,14 @@
-import {type RuntimeWrappedContextInstance} from "@fourtune/realm-js/runtime"
+import {
+	type EnkoreJSRuntimeContextOptions,
+	createContext
+} from "@anio-software/enkore.js-runtime"
 
 import {openFile as x} from "@aniojs-private/node-async-sync-fs/async"
 //>import {openFile as x} from "@aniojs-private/node-async-sync-fs/sync"
 
 export async function implementation(
 //>export function implementation(
-	wrapped_context: RuntimeWrappedContextInstance,
+	contextOptions: EnkoreJSRuntimeContextOptions,
 	path: string,
 	flags?: string,
 	mode?: number

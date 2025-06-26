@@ -1,4 +1,7 @@
-import {useContext, type RuntimeWrappedContextInstance} from "@fourtune/realm-js/runtime"
+import {
+	type EnkoreJSRuntimeContextOptions,
+	createContext
+} from "@anio-software/enkore.js-runtime"
 
 import {implementation as writeAtomicFile} from "#~synthetic/async.sync/writeAtomicFile.mts"
 //>import {implementation as writeAtomicFile} from "#~synthetic/async.sync/writeAtomicFileSync.mts"
@@ -11,7 +14,7 @@ export type AnioJsDependencies = {
 
 export async function implementation(
 //>export function implementation(
-	wrapped_context: RuntimeWrappedContextInstance,
+	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: AnioJsDependencies,
 	file_path: string,
 	data: any,
@@ -24,7 +27,7 @@ export async function implementation(
 	}
 ) : Promise<number> {
 //>) : number {
-	const context = useContext(wrapped_context, 0)
+	const context = createContext(contextOptions, 0)
 
 	context.log.trace(`writing atomic json file at '${file_path}'`)
 
@@ -40,7 +43,7 @@ export async function implementation(
 
 	return await writeAtomicFile(
 //>	return writeAtomicFile(
-		wrapped_context,
+		contextOptions,
 		dependencies,
 		file_path,
 		data_str,
