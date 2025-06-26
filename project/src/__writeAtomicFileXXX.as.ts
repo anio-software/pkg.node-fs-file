@@ -11,8 +11,8 @@ export type AnioJsDependencies = {
 
 import path from "node:path"
 
-import {mkdir, writeFile, rename} from "@aniojs-private/node-async-sync-fs/async"
-//>import {mkdir, writeFile, rename} from "@aniojs-private/node-async-sync-fs/sync"
+import {mkdir, writeFile, rename} from "@anio-software/pkg-private.node-consistent-fs/async"
+//>import {mkdir, writeFile, rename} from "@anio-software/pkg-private.node-consistent-fs/sync"
 
 export async function __implementation(
 //>export function __implementationSync(

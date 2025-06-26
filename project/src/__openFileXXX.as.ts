@@ -3,8 +3,8 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {openFile as x} from "@aniojs-private/node-async-sync-fs/async"
-//>import {openFile as x} from "@aniojs-private/node-async-sync-fs/sync"
+import {openFile as x} from "@anio-software/pkg-private.node-consistent-fs/async"
+//>import {openFile as x} from "@anio-software/pkg-private.node-consistent-fs/sync"
 
 export async function __implementation(
 //>export function __implementationSync(

@@ -6,8 +6,8 @@ import {
 import type {ReadFileInChunksResult} from "#~src/ReadFileInChunksResult.ts"
 //>import type {ReadFileInChunksSyncResult as ReadFileInChunksResult} from "#~src/ReadFileInChunksSyncResult.ts"
 
-import {openFile} from "@aniojs-private/node-async-sync-fs/async"
-//>import {openFile} from "@aniojs-private/node-async-sync-fs/sync"
+import {openFile} from "@anio-software/pkg-private.node-consistent-fs/async"
+//>import {openFile} from "@anio-software/pkg-private.node-consistent-fs/sync"
 
 export async function __implementation(
 //>export function __implementationSync(
