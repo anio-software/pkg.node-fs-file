@@ -23,10 +23,10 @@
             "hash": "09dd1de765033072ba1cbf8b1429cdc9c0a194fd40274ff35b2b689982812eb5"
         },
         "project/src/openFile.ts": {
-            "hash": "ecef6e449612026d3ed7e2cfa5f9969c76ed508fe4625a8959fb5a043388b4a0"
+            "hash": "7cdcf906f78babcc0f981e90391116ff83a0edeaaa25503f8bdf631ce4c58039"
         },
         "project/src/openFileSync.ts": {
-            "hash": "54484c2c969c421d799d066fb795dc3cb8fe21766570948e55dc8e803d0e870d"
+            "hash": "b284768481441cb141e63c4f1be72dee4b2052357da988bf3440e26aada8d159"
         },
         "project/src/readFileInChunks.ts": {
             "hash": "08ec5cc5667074b5a8cb556a549ec870e3b613c7a045a1a68e8f610a55ac7683"
@@ -83,13 +83,13 @@
             "hash": "58a00034ddd0e5fdc6073fde056ad7a2e19bfaaff295e219eede06d8d1434102"
         },
         "project/export/openFileFactory.ts": {
-            "hash": "28bcfc934533d2218a2e8a596dbd7af88636bca6d409185ac9bd6e843c213a6f"
+            "hash": "f233a84fe0e5fb58bfe113e6a48162ae78539b6c442eab07aa025373113d5362"
         },
         "project/export/openFile.ts": {
             "hash": "67695ed40eabc2b13b1db20478fd3ad2c04adb63965eaca5884ccc310a306cda"
         },
         "project/export/openFileSyncFactory.ts": {
-            "hash": "35bcbbb44293c3c68ca3cff554033fa396dc4b632561d43ebf59e00238ba3c47"
+            "hash": "20639399757707f3b637e5f4f72d753995a95a79c5c80915b083bff0a57fdc43"
         },
         "project/export/openFileSync.ts": {
             "hash": "e20910db01cdf732b113d9741c10c74bc7b0b4ad8823bd259d372fcd0ec41cab"
