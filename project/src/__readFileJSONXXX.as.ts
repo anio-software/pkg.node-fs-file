@@ -1,7 +1,4 @@
-import {
-	type EnkoreJSRuntimeContextOptions,
-	createContext
-} from "@anio-software/enkore.js-runtime"
+import type {EnkoreJSRuntimeContextOptions} from "@anio-software/enkore.js-runtime"
 
 import {__implementation as readFileString} from "#~src/readFileString.ts"
 //>import {__implementationSync as readFileString} from "#~src/readFileStringSync.ts"
