@@ -6,7 +6,7 @@ import {
 import {__implementation as writeAtomicFile} from "#~src/writeAtomicFile.ts"
 //>import {__implementationSync as writeAtomicFile} from "#~src/writeAtomicFileSync.ts"
 
-import {randomIdentifierSync} from "@aniojs/random-ident"
+import {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
 
 export type AnioJsDependencies = {
 	randomIdentifierSync: typeof randomIdentifierSync

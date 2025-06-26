@@ -3,7 +3,7 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {randomIdentifierSync} from "@aniojs/random-ident"
+import {randomIdentifierSync} from "@anio-software/pkg.random-identifier"
 
 export type AnioJsDependencies = {
 	randomIdentifierSync: typeof randomIdentifierSync
