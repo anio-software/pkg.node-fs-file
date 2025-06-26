@@ -3,8 +3,8 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {implementation as readFileString} from "#~synthetic/async.sync/readFileString.mts"
-//>import {implementation as readFileString} from "#~synthetic/async.sync/readFileStringSync.mts"
+import {__implementation as readFileString} from "#~src/readFileString.ts"
+//>import {__implementationSync as readFileString} from "#~src/readFileStringSync.ts"
 
 export async function __implementation(
 //>export function __implementationSync(
