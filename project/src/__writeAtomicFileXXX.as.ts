@@ -14,8 +14,8 @@ import path from "node:path"
 import {mkdir, writeFile, rename} from "@aniojs-private/node-async-sync-fs/async"
 //>import {mkdir, writeFile, rename} from "@aniojs-private/node-async-sync-fs/sync"
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: AnioJsDependencies,
 	file_path: string,

@@ -6,8 +6,8 @@ import {
 import {nodeFsFindNearestFile} from "@aniojs-private/node-fs-find-nearest-file"
 //>import {nodeFsFindNearestFileSync as nodeFsFindNearestFile} from "@aniojs-private/node-fs-find-nearest-file"
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	config_file_name: string,
 	start_dir: string

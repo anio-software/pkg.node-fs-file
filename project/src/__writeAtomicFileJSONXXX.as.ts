@@ -12,8 +12,8 @@ export type AnioJsDependencies = {
 	randomIdentifierSync: typeof randomIdentifierSync
 }
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: AnioJsDependencies,
 	file_path: string,

@@ -8,8 +8,8 @@ import {createHash} from "node:crypto"
 import {implementation as readFileInChunks} from "#~synthetic/async.sync/readFileInChunks.mts"
 //>import {implementation as readFileInChunks} from "#~synthetic/async.sync/readFileInChunksSync.mts"
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	file_path: string,
 	algo: string,

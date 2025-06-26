@@ -6,8 +6,8 @@ import {
 import {readFile} from "@aniojs-private/node-async-sync-fs/async"
 //>import {readFile} from "@aniojs-private/node-async-sync-fs/sync"
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	path: string
 ) : Promise<string> {

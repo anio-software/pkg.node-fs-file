@@ -9,8 +9,8 @@ import type {ReadFileInChunksResult} from "#~synthetic/async.sync/export/ReadFil
 import {openFile} from "@aniojs-private/node-async-sync-fs/async"
 //>import {openFile} from "@aniojs-private/node-async-sync-fs/sync"
 
-export async function implementation(
-//>export function implementation(
+export async function __implementation(
+//>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	file_path: string,
 	chunk_size: number
