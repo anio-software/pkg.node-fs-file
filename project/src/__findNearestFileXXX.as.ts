@@ -3,8 +3,8 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {nodeFsFindNearestFile} from "@aniojs-private/node-fs-find-nearest-file"
-//>import {nodeFsFindNearestFileSync as nodeFsFindNearestFile} from "@aniojs-private/node-fs-find-nearest-file"
+import {nodeFsFindNearestFile} from "@anio-software/pkg-private.node-fs-find-nearest-file"
+//>import {nodeFsFindNearestFileSync as nodeFsFindNearestFile} from "@anio-software/pkg-private.node-fs-find-nearest-file"
 
 export async function __implementation(
 //>export function __implementationSync(
