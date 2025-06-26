@@ -11,9 +11,9 @@ import {__implementation as readFileInChunks} from "#~src/readFileInChunks.ts"
 export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
-	file_path: string,
+	filePath: string,
 	algo: string,
-	hash_encoding?: BufferEncoding
+	hashEncoding?: BufferEncoding
 ) : Promise<string> {
 //>) : string {
 	const context = createContext(contextOptions, 0)
@@ -21,14 +21,14 @@ export async function __implementation(
 	const hash = createHash(algo)
 
 	context.log.trace(
-		`requested hash of file '${file_path}' with algo '${algo}'`
+		`requested hash of file '${filePath}' with algo '${algo}'`
 	)
 
 	//
 	// read file in 4096 byte chunks
 	//
-	const file = await readFileInChunks(contextOptions, file_path, 4096)
-//>	const file = readFileInChunks(contextOptions, file_path, 4096)
+	const file = await readFileInChunks(contextOptions, filePath, 4096)
+//>	const file = readFileInChunks(contextOptions, filePath, 4096)
 
 	while (true) {
 		const chunk = await file.readNextChunk()
@@ -39,11 +39,11 @@ export async function __implementation(
 		hash.update(chunk)
 	}
 
-	if (hash_encoding === undefined) {
-		hash_encoding = "hex"
+	if (hashEncoding === undefined) {
+		hashEncoding = "hex"
 	}
 
-	hash.setEncoding(hash_encoding)
+	hash.setEncoding(hashEncoding)
 	hash.end()
 
 	return hash.read()
