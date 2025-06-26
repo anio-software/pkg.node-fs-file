@@ -16,7 +16,7 @@ export async function __implementation(
 //>export function __implementationSync(
 	contextOptions: EnkoreJSRuntimeContextOptions,
 	dependencies: __EnkoreFunctionDependencies,
-	file_path: string,
+	filePath: string,
 	data: any,
 	options?: {
 		pretty?: boolean,
@@ -29,24 +29,24 @@ export async function __implementation(
 //>) : number {
 	const context = createContext(contextOptions, 0)
 
-	context.log.trace(`writing atomic json file at '${file_path}'`)
+	context.log.trace(`writing atomic json file at '${filePath}'`)
 
-	let data_str = options?.pretty === true ? JSON.stringify(data, null, 4) : JSON.stringify(data)
+	let dataStr = options?.pretty === true ? JSON.stringify(data, null, 4) : JSON.stringify(data)
 
 	//
 	// in unix it is common, if not required, that text files
 	// end with a new line
 	//
 	if (options?.disableNewLineAtEOF !== true) {
-		data_str += "\n"
+		dataStr += "\n"
 	}
 
 	return await writeAtomicFile(
 //>	return writeAtomicFile(
 		contextOptions,
 		dependencies,
-		file_path,
-		data_str,
+		filePath,
+		dataStr,
 		{
 			createParents: options?.createParents === true,
 			parentsMode: options?.parentsMode,
