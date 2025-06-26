@@ -14,6 +14,7 @@
     "@anio-software/enkore": "^0.0.100",
     "@anio-software/enkore.core": "^0.11.2",
     "@anio-software/enkore.target-js-node": "^0.0.254-canary-d8d99fc9-bcf63779",
+    "@anio-software/pkg-private.node-fs-find-nearest-file": "^0.0.1",
     "@aniojs-private/node-async-sync-fs": "^0.3.0",
     "@aniojs/random-ident": "^0.1.2"
   }
