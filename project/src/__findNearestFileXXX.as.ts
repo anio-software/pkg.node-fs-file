@@ -1,6 +1,4 @@
-import {
-	type EnkoreJSRuntimeContextOptions
-} from "@anio-software/enkore.js-runtime"
+import type {EnkoreJSRuntimeContextOptions} from "@anio-software/enkore.js-runtime"
 
 import {nodeFsFindNearestFile} from "@anio-software/pkg-private.node-fs-find-nearest-file"
 //>import {nodeFsFindNearestFileSync as nodeFsFindNearestFile} from "@anio-software/pkg-private.node-fs-find-nearest-file"
