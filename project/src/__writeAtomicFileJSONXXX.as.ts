@@ -3,8 +3,8 @@ import {
 	createContext
 } from "@anio-software/enkore.js-runtime"
 
-import {implementation as writeAtomicFile} from "#~synthetic/async.sync/writeAtomicFile.mts"
-//>import {implementation as writeAtomicFile} from "#~synthetic/async.sync/writeAtomicFileSync.mts"
+import {__implementation as writeAtomicFile} from "#~src/writeAtomicFile.ts"
+//>import {__implementationSync as writeAtomicFile} from "#~src/writeAtomicFileSync.ts"
 
 import {randomIdentifierSync} from "@aniojs/random-ident"
 
