@@ -1,23 +1,23 @@
 # This file is automatically managed by enkore
 # DO NOT ADD ENTRIES HERE, THEY WILL BE REMOVED
-/src/ReadFileInChunksResult.ts
-/src/ReadFileInChunksSyncResult.ts
 /src/findNearestFile.ts
 /src/findNearestFileSync.ts
 /src/hashFile.ts
 /src/hashFileSync.ts
-/src/openFile.ts
-/src/openFileSync.ts
-/src/readFileInChunks.ts
-/src/readFileInChunksSync.ts
-/src/readFileJSON.ts
-/src/readFileJSONSync.ts
-/src/readFileString.ts
-/src/readFileStringSync.ts
-/src/writeAtomicFileJSON.ts
-/src/writeAtomicFileJSONSync.ts
 /src/writeAtomicFile.ts
 /src/writeAtomicFileSync.ts
+/src/ReadFileInChunksResult.ts
+/src/ReadFileInChunksSyncResult.ts
+/src/readFileString.ts
+/src/readFileStringSync.ts
+/src/openFile.ts
+/src/openFileSync.ts
+/src/readFileJSON.ts
+/src/readFileJSONSync.ts
+/src/readFileInChunks.ts
+/src/readFileInChunksSync.ts
+/src/writeAtomicFileJSON.ts
+/src/writeAtomicFileJSONSync.ts
 /export/findNearestFileFactory.ts
 /export/findNearestFile.ts
 /export/findNearestFileSyncFactory.ts
